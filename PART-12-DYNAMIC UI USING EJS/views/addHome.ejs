@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Home to Airbnb</title>
+    <link rel="stylesheet" href="global.css">
+    <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center h-screen text-center px-4">
+
+    <header>
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">
+            Register Your Home 🏡
+        </h1>
+    </header>
+    <main class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <form action="/host/add-home" method="POST" class="flex flex-col space-y-4">
+            <input
+                type="text"
+                name="houseName"
+                placeholder="Enter Home 🏡✨"
+                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                required
+            />
+            <button type="submit" class="bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition">
+                Submit 🏠
+            </button>
+        </form>
+    </main>
+</body>
+</html>
