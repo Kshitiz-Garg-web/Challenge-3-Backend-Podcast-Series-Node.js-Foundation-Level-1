@@ -1,0 +1,143 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Home to Airbnb</title>
+    <link rel="stylesheet" href="global.css" />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center h-screen text-center px-4"
+  >
+    <header>
+      <h1 class="text-3xl font-bold text-gray-800 mb-4">
+        Register Your Home 🏡
+      </h1>
+    </header>
+    <main class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <form
+        action="/host/add-home"
+        method="POST"
+        class="flex flex-col space-y-4"
+      >
+        <input
+          type="text"
+          name="houseName"
+          placeholder="Enter Home 🏡✨"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+          required
+        />
+        <input
+          type="text"
+          name="houseLocation"
+          placeholder="Enter Location"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+          required
+        />
+        <input
+          type="text"
+          name="housePrice"
+          placeholder="Enter Price Per Night"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+          required
+        />
+        <input
+          type="text"
+          name="houseRating"
+          placeholder="Enter Rating ✨"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+          required
+        />
+        <input
+          type="text"
+          name="housePhotoUrl"
+          placeholder="Enter Photo Url"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition"
+        >
+          Submit 🏠
+        </button>
+      </form>
+    </main>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Your Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background Animation */
+        body {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff7eb3);
+            background-size: 300% 300%;
+            animation: gradientBG 6s infinite alternate ease-in-out;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6 text-center">
+
+    <main class="fade-in bg-white/30 backdrop-blur-lg shadow-2xl p-8 rounded-2xl w-full max-w-lg border border-white/20 transition-all duration-500 hover:shadow-red-300">
+        <h1 class="text-4xl font-extrabold text-gray-900">Register Your Home 🏡</h1>
+        <p class="text-gray-700 mt-2 mb-6">List your property & start earning! ✨</p>
+
+        <form action="/host/add-home" method="POST" class="space-y-6">
+            <div class="relative">
+                <input type="text" name="houseName" placeholder="Home Name" required
+                    class="w-full p-3 bg-white/30 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-red-400 placeholder-gray-700 text-lg shadow-sm transition-all duration-300">
+              </div>
+            <div>
+                <input type="text" name="houseLocation" placeholder="Location" required
+                    class="w-full p-3 bg-white/30 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-red-400 placeholder-gray-700 text-lg shadow-sm transition-all duration-300">
+            </div>
+            <div>
+                <input type="number" name="housePrice" placeholder="Price Per Night" required
+                    class="w-full p-3 bg-white/30 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-red-400 placeholder-gray-700 text-lg shadow-sm transition-all duration-300">
+            </div>
+            <div>
+                <input type="number" step="0.1" name="houseRating" placeholder="Rating (1-5) ⭐" required
+                    class="w-full p-3 bg-white/30 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-red-400 placeholder-gray-700 text-lg shadow-sm transition-all duration-300">
+            </div>
+            <div>
+                <input type="url" name="housePhotoUrl" placeholder="Photo URL" required
+                    class="w-full p-3 bg-white/30 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-red-400 placeholder-gray-700 text-lg shadow-sm transition-all duration-300">
+        </div>
+
+            <button type="submit"
+                class="w-full bg-red-500 text-white text-lg font-semibold py-3 rounded-lg hover:bg-red-600 transition-all shadow-md transform hover:scale-105 duration-300">
+                Submit 🏠
+            </button>
+        </form>
+      </main>
+      
+</body>
+</html>
+

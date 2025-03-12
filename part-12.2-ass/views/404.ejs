@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Page Not Found</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background Styling */
+        body {
+            background: radial-gradient(circle at center, #0f172a, #1e293b);
+            overflow: hidden;
+        }
+
+        /* Red Glitchy Effect */
+        .glitch {
+            position: relative;
+            font-size: 6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ff4f4f;
+            animation: glitch 1.5s infinite alternate;
+        }
+
+        @keyframes glitch {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-5px); }
+            40% { transform: translateX(5px); }
+            60% { transform: translateX(-3px); }
+            80% { transform: translateX(3px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Bouncing Effect */
+        .bounce {
+            animation: bounce 1s infinite alternate ease-in-out;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(10px); }
+        }
+
+        /* Red Horizontal Line */
+        .border-line {
+            width: 100%;
+            height: 4px;
+            background: #ff4f4f;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            animation: line-glow 1.5s infinite alternate;
+        }
+
+        @keyframes line-glow {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #ff4f4f;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: floatParticles 5s infinite linear;
+        }
+
+        @keyframes floatParticles {
+            from { transform: translateY(0); opacity: 0.5; }
+            to { transform: translateY(-100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col items-center justify-center text-center px-4 relative">
+
+    <!-- Floating Particles -->
+    <div class="particle" style="top: 90%; left: 20%; animation-delay: 0.5s;"></div>
+    <div class="particle" style="top: 80%; left: 50%; animation-delay: 1s;"></div>
+    <div class="particle" style="top: 70%; left: 80%; animation-delay: 1.5s;"></div>
+    <div class="particle" style="top: 60%; left: 30%; animation-delay: 2s;"></div>
+    <div class="particle" style="top: 50%; left: 70%; animation-delay: 2.5s;"></div>
+
+    <!-- Red Glowing Line -->
+    <div class="border-line"></div>
+
+    <header>
+        <h1 class="glitch bounce">404</h1>
+        <p class="text-gray-400 text-lg mt-3">Oops! This page doesn't exist on Airbnb.</p>
+    </header>
+
+    <main class="mt-6">
+        <a href="/">
+            <button class="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow-lg transform hover:scale-110 transition-all duration-300">
+                🔙 Go Back to Home
+            </button>
+        </a>
+    </main>
+
+</body>
+</html>
