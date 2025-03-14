@@ -1,0 +1,16 @@
+[
+  {"houseName":"The Grand Palace","price":"12500","location":"Jaipur, Hawa Mahal Road","rating":"4.6","PhotoUrl":"https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"},
+  {"houseName":"Royal Residency","price":"9800","location":"Delhi, Connaught Place","rating":"4.5","PhotoUrl":"https://images.pexels.com/photos/259600/pexels-photo-259600.jpeg"},
+  {"houseName":"Ocean View Villa","price":"13000","location":"Goa, Calangute Beach","rating":"4.7","PhotoUrl":"https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"},
+  {"houseName":"Mountain Retreat","price":"7500","location":"Manali, Solang Valley","rating":"4.4","PhotoUrl":"https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"},
+  {"houseName":"Sunset Penthouse","price":"11800","location":"Mumbai, Marine Drive","rating":"4.8","PhotoUrl":"https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg"},
+  {"houseName":"Heritage Haveli","price":"10200","location":"Udaipur, City Palace Road","rating":"4.6","PhotoUrl":"https://images.pexels.com/photos/261169/pexels-photo-261169.jpeg"},
+  {"houseName":"Hilltop Bungalow","price":"8900","location":"Shimla, Mall Road","rating":"4.3","PhotoUrl":"https://images.pexels.com/photos/932094/pexels-photo-932094.jpeg"},
+  {"houseName":"The Urban Loft","price":"9700","location":"Bangalore, Indiranagar","rating":"4.5","PhotoUrl":"https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg"},
+  {"houseName":"Skyline Towers","price":"12700","location":"Kolkata, Park Street","rating":"4.9","PhotoUrl":"https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"},
+  {"houseName":"Serene Studio","price":"4500","location":"Chennai, Besant Nagar","rating":"4.2","PhotoUrl":"https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"},
+  {"houseName":"Lakeview Mansion","price":"9900","location":"Bhopal, Upper Lake Road","rating":"4.6","PhotoUrl":"https://images.pexels.com/photos/259600/pexels-photo-259600.jpeg"},
+  {"houseName":"Golden Heights","price":"12500","location":"Hyderabad, Banjara Hills","rating":"4.8","PhotoUrl":"https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg"},
+  {"houseName":"Pearl Residency","price":"9100","location":"Lucknow, Hazratganj","rating":"4.5","PhotoUrl":"https://images.pexels.com/photos/932094/pexels-photo-932094.jpeg"},
+  {"houseName":"Cosmopolitan Suites","price":"2500","location":"Pune, Koregaon Park","rating":"4.9","PhotoUrl":"https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"}
+]

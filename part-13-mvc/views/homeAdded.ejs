@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success! Home Added 🎉</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background Animation */
+        body {
+            background: linear-gradient(135deg, #d4fc79, #96e6a1);
+            background-size: 300% 300%;
+            animation: gradientBG 6s infinite alternate ease-in-out;
+            overflow: hidden; /* Prevents scroll */
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Confetti Animation */
+        @keyframes confetti {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(720deg); }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: confetti 3s linear infinite;
+        }
+
+        /* Random Confetti Placement */
+        .confetti:nth-child(odd) { background: #ff7eb3; }
+        .confetti:nth-child(even) { background: #ff758c; }
+    </style>
+</head>
+<body class="h-screen flex items-center justify-center text-center relative">
+
+    <!-- Confetti Elements -->
+    <div class="confetti" style="top: 10%; left: 20%; animation-delay: 0.5s;"></div>
+    <div class="confetti" style="top: 20%; left: 50%; animation-delay: 1s;"></div>
+    <div class="confetti" style="top: 30%; left: 80%; animation-delay: 1.5s;"></div>
+    <div class="confetti" style="top: 40%; left: 30%; animation-delay: 2s;"></div>
+    <div class="confetti" style="top: 50%; left: 70%; animation-delay: 2.5s;"></div>
+
+    <main class="fade-in bg-white/30 backdrop-blur-lg shadow-2xl p-8 rounded-2xl w-full max-w-lg border border-white/20 transition-all duration-500 hover:shadow-green-300">
+        <h1 class="text-4xl font-extrabold text-green-700 animate-bounce">
+            ✅ Home Registered Successfully!
+        </h1>
+        <p class="text-gray-800 mt-3">Your listing is now live. 🎉</p>
+
+        <a href="/"
+            class="inline-block mt-6 bg-green-500 text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md transform hover:scale-110 hover:bg-green-600 transition-all duration-300">
+            🔙 Go to Home
+        </a>
+    </main>
+
+</body>
+</html>
