@@ -1,0 +1,185 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Users Data</title>
+  </head>
+  <body>
+    <main>
+      <table>
+        <caption>
+          <h2>Data</h2>
+        </caption>
+        <tr>
+          <td>Id</td>
+          <td>UserName</td>
+          <td>Email</td>
+        </tr>
+
+        <% for(user of users){ %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.username %></td>
+          <td><%= user.email %></td>
+        </tr>
+        <% } %>
+      </table>
+    </main>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Cards</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #f7f8fc, #e3eaf1);
+        padding: 2rem;
+        min-height: 100vh;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        color: #333;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f0f0f0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+        opacity: 0.95;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.6rem;
+      }
+
+      .card:hover {
+        perspective: 1000px;
+        transform: translateZ(-50px) translateY(-8px) scale(0.95);
+        transition: all 0.4s ease;
+        opacity: 0.95;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.112);
+      }
+
+      .card strong {
+        color: rgb(39, 28, 28);
+      }
+
+      .card h3 {
+        color: #007bff;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+        margin-bottom: 0.3rem;
+        color: #555;
+      }
+
+      .btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.6rem;
+        margin-top: 0.8rem;
+      }
+
+      .edit-btn,
+      .delete-btn {
+        flex: 1;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .edit-btn {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .edit-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .delete-btn {
+        background-color: #dc3545;
+        color: white;
+      }
+
+      .delete-btn:hover {
+        background-color: #a71d2a;
+      }
+      @media screen and (max-width: 500px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .card {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>All Users</h1>
+    <div class="card-container">
+      <% for(user of users) { %>
+      <div class="card">
+        <h3><strong>User ID:</strong> <%= user.id %></h3>
+        <p><strong>Username:</strong> <%= user.username %></p>
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <div class="btn-container">
+          <form
+            action="/user/<%= user.id %>/edit"
+            method="get"
+            style="display: inline"
+          >
+            <button class="edit-btn">✏️ Edit</button>
+          </form>
+          <form
+            action="/user/<%= user.id %>/delete?_method=DELETE"
+            method="POST"
+            style="display: inline"
+          >
+            <button class="delete-btn">🗑️ Delete</button>
+          </form>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
